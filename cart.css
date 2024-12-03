@@ -1,0 +1,123 @@
+/* General styles for the body */
+body {
+    font-family: Arial, sans-serif; /* Set font family */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    background-color: whitesmoke; /* Set background color */
+}
+
+/* Header styles */
+header {
+    background-color: black; /* Set background color for header */
+    color: #ddd; /* Set text color */
+    padding: 5px; /* Add padding */
+    height: 45px; /* Set height */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    font-size: 1.2rem; /* Set font size */ 
+}
+
+/* Cart container styles */
+.cart-container {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+    padding: 20px; /* Add padding */
+}
+
+/* Individual cart item styles */
+.cart-item {
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content */
+    background-color: white; /* Set background color */
+    border: 1px solid #ddd; /* Add border */
+    border-radius: 10px; /* Round corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    margin: 15px 0; /* Add margin */
+    padding: 15px; /* Add padding */
+    width: 100%; /* Full width */
+    max-width: 600px; /* Limit max width */
+    box-sizing: border-box; /* Include padding and border in width/height */
+}
+
+/* Header styles for each cart item */
+.cart-item-header {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    gap: 15px; /* Space between image and title */
+    margin-bottom: 10px; /* Space below header */
+}
+
+/* Image styles for each cart item */
+.card-image {
+    width: 50px; /* Set image width */
+    height: 50px; /* Set image height */
+    object-fit: cover; /* Cover the area */
+}
+
+/* Content styles for each cart item */
+.cart-item-content {
+    text-align: center; /* Center text */
+    margin-bottom: 15px; /* Space below content */
+}
+
+/* Button container styles */
+.button-container {
+    display: flex; /* Use flexbox for layout */
+    gap: 20px; /* Space between buttons */
+    justify-content: center; /* Center buttons */
+    margin-top: 10px; /* Space above buttons */
+}
+
+/* General button styles */
+button {
+    background-color: #007bff; /* Set background color */
+    border: none; /* Remove border */
+    color: white; /* Set text color */
+    padding: 10px 15px; /* Add padding */
+    border-radius: 5px; /* Round corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 0.9rem; /* Set font size */
+    width: 100px; /* Set button width */
+    text-align: center; /* Center text */
+}
+
+/* Hover effect for general buttons */
+button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+/* Apply button specific styles */
+.apply-button {
+    background-color: #28a745; /* Set background color */
+}
+
+
+/* Remove button specific styles */
+.remove-button {
+    background-color: transparent; /* Transparent background */
+    border: none; /* Remove border */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: black; /* Set text color */
+    font-size: 1.2rem; /* Set font size */
+}
+
+/* Hover effect for remove button */
+.remove-button:hover {
+    color: #c82333; /* Change color on hover */
+}
+
+/* Footer styles */
+footer {
+    text-align: center; /* Center text */
+    margin: 20px 0; /* Add margin */
+}
+
+/* Footer link styles */
+footer a {
+    color: #007bff; /* Set link color */
+    text-decoration: none; /* Remove underline */
+    font-size: 1rem; /* Set font size */
+}

@@ -1,0 +1,165 @@
+/* General styles */
+body {
+  background-color: whitesmoke;
+  font-family: Arial, sans-serif;
+  display: flex; /* Changed to flex for better mobile layout */
+  flex-direction: column;
+}
+
+.logo {
+  max-width: 100%; /* Make sure the image is responsive */
+  height: auto; /* Maintain aspect ratio */
+  margin: 20px 0; /* Add some margin around the image */
+}
+
+/* Welcome Note */
+.welcome-note {
+  text-align: center;
+  margin: 25px;
+}
+
+/* Card container */
+.card-container {
+  position: relative;
+  width: 90vw; /* Responsive width */
+  height: 50vh; /* Responsive height */
+  perspective: 1050px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Cards */
+.cards {
+  position: relative;
+  width: 50%;
+  height: 80%;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+.card {
+  position: absolute;
+  width: 60vw; /* Reduced width for mobile */
+  height: 30vh; /* Reduced height for mobile */
+  background-color: #f1f1f1;
+  border-radius: 10px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  padding: 10px; /* Reduced padding */
+  font-size: 0.78rem; /* Reduced font size */
+  text-align:initial;
+  transform-origin: center center ;
+  transition: transform 1s, filter 0.5s;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  backface-visibility: hidden; /* Prevent the back of the card from being visible when flipped */
+}
+
+.blurred {
+  filter: blur(5px); /* Apply blur effect */
+}
+
+.card-image {
+  width: 40px; /* Reduced width for mobile */
+  height: 40px; /* Reduced height for mobile */
+  object-fit: cover; /* Ensure image covers the area */
+  border-radius: 50%; /* Make the image circular */
+  margin-right: 10px; /* Space between image and title */
+}
+
+.card h2 {
+  font-size: 0.9rem; /* Adjust font size for title */
+  margin: 0; /* Remove default margin */
+  text-align: left; /* Align text to the left */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .card {
+      width: 45vw; /* Adjust width for smaller screens */
+      height: 30vh; /* Adjust height for smaller screens */
+  }
+
+  .card-image {
+      width: 50px; /* Adjust image size for smaller screens */
+      height: 50px; /* Adjust image size for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Curve Effect */
+  .card:nth-child(1) {
+      transform: rotateX(-20deg) translateZ(100px);
+  }
+
+  .card:nth-child(2) {
+      transform: rotateX(-10deg) translateZ(80px);
+  }
+
+  .card:nth-child(3) {
+      transform: rotateX(0deg) translateZ(60px);
+  }
+
+  .card:nth-child(4) {
+      transform: rotateX(10deg) translateZ(80px);
+  }
+
+  .card:nth-child(5) {
+      transform: rotateX(20deg) translateZ(100px);
+  }
+
+  .card:nth-child(6) {
+      transform: rotateX(30deg) translateZ(120px);
+  }
+}
+
+
+.button-container {
+  border-radius: 5px;
+  display: flex; /* Use flexbox to align buttons */
+  gap: 10px; /* Space between buttons */
+  margin-top: 10px; /* Add some space above the buttons */
+}
+
+.apply-button {
+  padding: 5px 12px; /* Padding for the button */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  transition: background-color 0.3s ease; /* Transition effect */
+}
+
+
+/* Button Animation */
+@keyframes button-click {
+  0% {
+      transform: scale(1);
+  }
+  50% {
+      transform: scale(0.95);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+
+.cart-logo {
+  position: absolute; /* Position relative to the nearest positioned ancestor */
+  top: 15px; /* Distance from the top */
+  right: 15px; /* Distance from the right */
+  z-index: 1000; /* Ensure it appears above other elements */
+  color: black; /* Change color to black */
+  font-size: 25px; /* Increase size of the logo */
+  text-decoration: none; /* Remove underline */
+}
+
+.cart-logo:hover {
+  color: #007bff; /* Change color on hover */
+}
